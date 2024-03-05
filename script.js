@@ -17,3 +17,20 @@ document.querySelector('.decrease').addEventListener('click', function() {
 function updateCounter() {
     document.getElementById('cookiecounter').textContent = `${count} cookies eaten`;
 }
+
+
+//Image changer
+
+const imageCookie = document.getElementById('cookie'); //We declare a variable that will point to the changing image
+
+document.getElementById("imagechanger1").addEventListener('click', function() {
+    imageCookie.src = 'images/cookie.png';
+});
+
+document.getElementById("imagechanger2").addEventListener('click', function() {
+    imageCookie.src = 'images/cookie2.png';
+});
+
+document.getElementById("imagechanger3").addEventListener('click', function() {
+    imageCookie.src = 'images/cookie3.png';
+});

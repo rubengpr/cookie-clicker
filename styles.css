@@ -1,5 +1,8 @@
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,4 +10,30 @@ body {
 img {
     width: 130px;
     height: auto;
+}
+
+#mainbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(252, 179, 45);
+}
+
+button {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: rgb(253, 244, 232);
+    cursor: pointer;
+}
+
+#imagebuttons {
+    margin-top: 10px;
 }

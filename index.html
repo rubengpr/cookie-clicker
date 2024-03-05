@@ -7,16 +7,24 @@
     <title>Cookie project</title>
 </head>
 <body>
-    <h1>Eaten cookies counter</h1>
-    <img id="cookie" src="images/cookie.png" alt="An image of a standard cookie">
-    <div id="boxcounter">
-        <p id="cookiecounter">0 cookies eaten</p>
+    <div id="mainbox">
+        <h1>Eaten cookies counter</h1>
+        <p>Choose the aspect of your cookie</p>
+        <img id="cookie" src="images/cookie.png" alt="An image of a standard cookie">
+        <div id="boxcounter">
+            <p id="cookiecounter">0 cookies eaten</p>
+        </div>
+        <div id="buttons">
+            <button class="decrease">Decrease</button>
+            <button class="increase">Increase</button>
+        </div>
+        <div id="imagebuttons">
+            <button id="imagechanger1">Image 1</button>
+            <button id="imagechanger2">Image 2</button>
+            <button id="imagechanger3">Image 3</button>
+        </div>
+        <p>Press the buttons <strong>Increase</strong> and <strong>Decrease</strong> to modify the number of cookies eaten</p>
     </div>
-    <div id="buttons">
-        <button class="decrease">Decrease</button>
-        <button class="increase">Increase</button>
-    </div>
-    <p>Press the buttons <strong>Increase</strong> and <strong>Decrease</strong> to modify the number of cookies eaten</p>
     <script src="script.js"></script>
 </body>
 </html>
