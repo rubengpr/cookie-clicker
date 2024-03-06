@@ -18,6 +18,12 @@ function updateCounter() {
     document.getElementById('cookiecounter').textContent = `${count} cookies eaten`;
 }
 
+// Set to 0 the counter
+document.querySelector('.reset').addEventListener('click', function() {
+    count = 0;
+    updateCounter();
+})
+
 
 //Image changer
 
