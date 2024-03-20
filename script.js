@@ -16,6 +16,15 @@ document.querySelector('.decrease').addEventListener('click', function() {
 // Function to update the counter display
 function updateCounter() {
     document.getElementById('cookiecounter').textContent = `${count} cookies eaten`;
+    if (count >= 0 && count < 10) {
+        document.getElementById('hungriness').textContent = 'Not very hungry'
+    } else if (count >= 10 && count < 20) {
+        document.getElementById('hungriness').textContent = 'A bit hungry'
+    } else if (count >= 20 && count < 30) {
+        document.getElementById('hungriness').textContent = 'Hungry'
+    } else if (count >= 30) {
+        document.getElementById('hungriness').textContent = 'Very hungry'
+    }
 }
 
 // Set to 0 the counter
@@ -39,4 +48,12 @@ document.getElementById("imagechanger2").addEventListener('click', function() {
 
 document.getElementById("imagechanger3").addEventListener('click', function() {
     imageCookie.src = 'images/cookie3.png';
+});
+
+//Visibility of FAQ answers
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', event => {
+        const answer = event.target.nextElementSibling;
+        answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    });
 });

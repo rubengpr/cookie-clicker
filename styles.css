@@ -37,3 +37,13 @@ button:hover {
 #imagebuttons {
     margin-top: 10px;
 }
+
+.faq-answer {
+    display: none;
+    /* Add more styles as needed */
+}
+
+.faq-question {
+    cursor: pointer;
+    /* Add more styles as needed */
+}
