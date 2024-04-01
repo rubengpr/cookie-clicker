@@ -1,41 +1,41 @@
-let count = 0; // Initial count
+// Initial cookie cookieCount
+let cookieCount = 0;
 
+// Increase cookie count by 1 on click to "Increase" button
 document.querySelector('.increase').addEventListener('click', function() {
-    count++; // Increase count by 1
+    cookieCount++; // Increase cookieCount by 1
     updateCounter(); // Update the counter display
 });
 
-// Add event listener to the "Decrease" button
+// Decrease cookie count by 1 on click to "Decrease" button
 document.querySelector('.decrease').addEventListener('click', function() {
-    if (count > 0) {
-        count--; // Decrease count by 1, but ensure count doesn't go below 0
+    if (cookieCount > 0) {
+        cookieCount--; // Decrease cookieCount by 1, but ensure cookieCount doesn't go below 0
         updateCounter(); // Update the counter display
     }
 });
 
 // Function to update the counter display
 function updateCounter() {
-    document.getElementById('cookiecounter').textContent = `${count} cookies eaten`;
-    if (count >= 0 && count < 10) {
-        document.getElementById('hungriness').textContent = 'Not very hungry'
-    } else if (count >= 10 && count < 20) {
-        document.getElementById('hungriness').textContent = 'A bit hungry'
-    } else if (count >= 20 && count < 30) {
-        document.getElementById('hungriness').textContent = 'Hungry'
-    } else if (count >= 30) {
-        document.getElementById('hungriness').textContent = 'Very hungry'
+    document.getElementById('cookiecounter').textContent = `${cookieCount} cookies produced`;
+    if (cookieCount >= 0 && cookieCount < 10) {
+        document.getElementById('production').textContent = 'Not too much produced'
+    } else if (cookieCount >= 10 && cookieCount < 20) {
+        document.getElementById('production').textContent = 'Starting to produce'
+    } else if (cookieCount >= 20 && cookieCount < 30) {
+        document.getElementById('production').textContent = 'Producing good quantity'
+    } else if (cookieCount >= 30) {
+        document.getElementById('production').textContent = 'Producing a lot!'
     }
-}
+};
 
-// Set to 0 the counter
-document.querySelector('.reset').addEventListener('click', function() {
-    count = 0;
+// Set to 0 the counter on click "Reset" button
+document.querySelector('.resetproduction').addEventListener('click', function() {
+    cookieCount = 0;
     updateCounter();
-})
-
+});
 
 //Image changer
-
 const imageCookie = document.getElementById('cookie'); //We declare a variable that will point to the changing image
 
 document.getElementById("imagechanger1").addEventListener('click', function() {
@@ -50,10 +50,14 @@ document.getElementById("imagechanger3").addEventListener('click', function() {
     imageCookie.src = 'images/cookie3.png';
 });
 
-//Visibility of FAQ answers
-document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', event => {
-        const answer = event.target.nextElementSibling;
-        answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
-    });
-});
+//Cookie production simulator
+const workers = document.getElementById('workers');
+const cookiesWorker = document.getElementById('cookies-worker');
+
+function calculateCookies() {
+    const numCookies = workers.value * cookiesWorker.value;
+    document.getElementById('result').textContent = `You can produce ${numCookies} cookies`;
+}
+
+workers.addEventListener('input', calculateCookies);
+cookiesWorker.addEventListener('input', calculateCookies);

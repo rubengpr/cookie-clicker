@@ -4,37 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Cookie project</title>
+    <link rel="icon" href="images/cookie.png">
+    <title>Cookie clicker project</title>
 </head>
 <body>
-    <div id="mainbox">
-        <h1>Eaten cookies counter</h1>
-        <p id="hungriness"></p>
-        <img id="cookie" src="images/cookie.png" alt="An image of a standard cookie">
-        <div id="boxcounter">
-            <p id="cookiecounter">0 cookies eaten</p>
-        </div>
-        <div id="buttons">
-            <button class="decrease">Decrease</button>
-            <button class="increase">Increase</button>
-            <button class="reset">Reset</button>
-        </div>
-        <div id="imagebuttons">
-            <button id="imagechanger1">Cookie 1</button>
-            <button id="imagechanger2">Cookie 2</button>
-            <button id="imagechanger3">Cookie 3</button>
-        </div>
-        <p>Press the buttons <strong>Increase</strong> and <strong>Decrease</strong> to modify the number of cookies eaten. Press <strong>Reset</strong> to start over from 0.</p>
-        <div class="faq">
-            <div class="faq-item">
-                <h3 class="faq-question">Question 1</h3>
-                <p class="faq-answer">Answer 1</p>
+    <nav>
+        <img id="navbarlogo" src="images/cookie.png" alt="Website Logo: A Cookie illustration">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <button id="buttonnav">More projects</button>
+    </nav>
+    <section id="main">
+        <div class="box">
+            <h1>Produced cookies counter</h1>
+            <p id="production">Not too much produced</p>
+            <img id="cookie" src="images/cookie.png" alt="An image of a standard cookie">
+            <div id="boxcounter">
+                <p id="cookiecounter">0 cookies produced</p>
             </div>
-            <div class="faq-item">
-                <h3 class="faq-question">Question 2</h3>
-                <p class="faq-answer">Answer 2</p>
+            <div id="buttons">
+                <button class="decrease">Decrease</button>
+                <button class="increase">Increase</button>
+                <button class="resetproduction">Reset</button>
             </div>
+            <div id="imagebuttons">
+                <button id="imagechanger1">Cookie 1</button>
+                <button id="imagechanger2">Cookie 2</button>
+                <button id="imagechanger3">Cookie 3</button>
+            </div>
+            <p id="textinfo">Press the buttons <strong>Increase</strong> and <strong>Decrease</strong> to modify the number of cookies eaten. Press <strong>Reset</strong> to start over from 0.</p>
+
+            </div>
+        </div> 
+        <div class="box">
+            <h1>Cookie production simulator</h1>
+            
+            <div id="inputcontainer">
+                <div class="inputfield">
+                    <label for="workers">NUMBER OF WORKERS</label>
+                    <input type="number" id="workers" placeholder="0">
+                </div>
+
+                <div class="inputfield">
+                    <label for="cookies-worker">COOKIES PER WORKER</label>
+                    <input type="number" id="cookies-worker" placeholder="0">
+                </div>
+            </div>    
+            <p id="result">You can produce...</p>
         </div>
-    <script src="script.js"></script>
+    </section>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,48 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fae1b3;
+    height: 50px;
+    padding: 15px 80px;
+}
+
+#navbarlogo {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 15px;
+    cursor: pointer;
+    padding: 8px 15px;
+    
+}
+
+li:hover {
+    background-color: #fcb32d;
+    border-radius: 5px;
+}
+
+#buttonnav {
+    background-color: #fcb32d;
+    border: 1px solid gray;
 }
 
 img {
@@ -12,17 +50,40 @@ img {
     height: auto;
 }
 
-#mainbox {
+#main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
+}
+
+.box {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(252, 179, 45);
+    background-color: #fcb32d;
+}
+
+#production {
+    background-color: #fae1b3;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#cookiecounter {
+    background-color: #fae1b3;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 button {
+    font-size: 12px;
     background-color: white;
     border: 1px solid gray;
     border-radius: 5px;
@@ -38,12 +99,53 @@ button:hover {
     margin-top: 10px;
 }
 
-.faq-answer {
-    display: none;
-    /* Add more styles as needed */
+#textinfo {
+    font-size: 11px;
+    text-align: center;
 }
 
-.faq-question {
-    cursor: pointer;
-    /* Add more styles as needed */
+#inputcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputfield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+label {
+    font-size: 10px;
+    margin: 5px 0px 2px 0px;
+    color: #1e1e1e;
+}
+
+input {
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 100px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input:focus {
+    outline: 1px solid black;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+#result {
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
 }
