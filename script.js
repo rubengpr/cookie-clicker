@@ -61,3 +61,34 @@ function calculateCookies() {
 
 workers.addEventListener('input', calculateCookies);
 cookiesWorker.addEventListener('input', calculateCookies);
+
+const countrySelect = document.getElementById('country');
+const citySelect = document.getElementById('city');
+
+// Define city options for each country
+const cityOptions = {
+    Spain: ['Barcelona', 'Madrid', 'Valencia'],
+    France: ['Paris', 'Marseille', 'Grenoble']
+    // Add more options for other countries as needed
+};
+
+// Function to update city options based on the selected country
+function updateCityOptions() {
+    const selectedCountry = countrySelect.value;
+    const cities = cityOptions[selectedCountry] || []; // Get cities for selected country or empty array
+    citySelect.innerHTML = ''; // Clear existing options
+
+    // Add new city options
+    cities.forEach(city => {
+        const option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+    });
+}
+
+// Event listener to update city options when the selected country changes
+countrySelect.addEventListener('change', updateCityOptions);
+
+// Initial update of city options based on the initially selected country
+updateCityOptions();

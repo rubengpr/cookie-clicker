@@ -45,7 +45,7 @@ li:hover {
     border: 1px solid gray;
 }
 
-img {
+#cookie {
     width: 130px;
     height: auto;
 }
@@ -116,13 +116,13 @@ button:hover {
     margin: 0px 10px;
 }
 
-label {
+.labelsimulator {
     font-size: 10px;
     margin: 5px 0px 2px 0px;
     color: #1e1e1e;
 }
 
-input {
+.inputsimulator {
     border: 1px solid gray;
     border-radius: 3px;
     width: 100px;
@@ -148,4 +148,35 @@ input:focus::placeholder {
 #result {
     font-size: 20px;
     margin: 20px 0px 0px 0px;
+}
+
+#newsletterform {
+    display: flex;
+    flex-direction: column;
+}
+
+.formfield {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.formfieldcolumn {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelwidth {
+    width: 80px;
+}
+
+.radiobuttonsdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#femalelabel {
+    margin-left: 10px;
 }

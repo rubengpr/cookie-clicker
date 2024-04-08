@@ -44,16 +44,77 @@
             
             <div id="inputcontainer">
                 <div class="inputfield">
-                    <label for="workers">NUMBER OF WORKERS</label>
-                    <input type="number" id="workers" placeholder="0">
+                    <label class="labelsimulator" for="workers">NUMBER OF WORKERS</label>
+                    <input id="workers" class="inputsimulator" type="number" placeholder="0">
                 </div>
 
                 <div class="inputfield">
-                    <label for="cookies-worker">COOKIES PER WORKER</label>
-                    <input type="number" id="cookies-worker" placeholder="0">
+                    <label class="labelsimulator" for="cookies-worker">COOKIES PER WORKER</label>
+                    <input id="cookies-worker" class="inputsimulator" type="number" placeholder="0">
                 </div>
             </div>    
             <p id="result">You can produce...</p>
+        </div>
+        <div class="box">
+            <h2>Get news about some other cookie projects</h2>
+            <p>Fill out the form and receive a message on your email, monthly.</p>
+            <form id="newsletterform" action="results.html" method="GET">
+                <div class="formfield" class="formfield">
+                    <p class="labelwidth">Gender</p>
+                    <div class="radiobuttonsdiv">
+                        <div class="radiobutton">
+                            <label id="malelabel" for="male">Male</label>
+                            <input type="radio" name="gender" id="male" value="male">
+                        </div>
+                        <div class="radiobutton">
+                            <label  id="femalelabel" for="female">Female</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                        </div>
+                    </div>
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Marmi Tako" required>
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="mypasssword123." required>
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="myemail@email.so" required>
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+34 684 30 10 43" required>
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="99" min="1" max="150">
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="birthdate">Birthdate</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="formfield">
+                    <label class="labelwidth" for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="">Select a country</option>
+                        <option value="Spain">Spain</option>
+                        <option value="France">France</option>
+                    </select>
+                </div>                
+                <div class="formfield">
+                    <label class="labelwidth" for="city">City</label>
+                    <select name="city" id="city">
+                    </select>
+                </div>
+                <div class="formfieldcolumn">
+                    <label for="message">Add a message</label>
+                    <textarea name="message" id="message" placeholder="Your message here" cols="30" rows="3"></textarea>
+                </div>
+                <button type="submit" >Submit</button>
+            </form>
         </div>
     </section>
 <script src="script.js"></script>
