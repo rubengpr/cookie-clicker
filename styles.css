@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+/* Headings */
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -137,12 +143,12 @@ input::-webkit-outer-spin-button {
     appearance: none;
 }
 
-input:focus {
-    outline: 1px solid black;
-}
-
 input:focus::placeholder {
     color: transparent;
+}
+
+input:focus {
+    outline: none;
 }
 
 #result {
@@ -190,6 +196,8 @@ input:focus::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 200px;
 }
 
 #loginbox {
@@ -200,15 +208,8 @@ input:focus::placeholder {
     padding: 30px;
     width: 400px;
     height: auto;
-    margin-top: 50px;
     background-color: #fdf6e9;
-    border-radius: 10px;
-}
-
-.logintextfield {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+    border-radius: 8px;
 }
 
 .label-login {
@@ -226,8 +227,33 @@ input:focus::placeholder {
     padding: 5px 10px;
 }
 
-.inputlogin:focus {
-    border: 1px solid #f9c76a;
+#password-login {
+    width: 360px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#passwordfield {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 420px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+#eyeicon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .buttonlogin {

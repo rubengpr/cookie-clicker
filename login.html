@@ -10,18 +10,16 @@
     <div id="loginbox">
         <h3>Log in or create an account</h3>
         <form action="/">
-            <div class="logintextfield">
-                <label class="label-login" for="email">Email</label>
-                <input type="email" class="inputlogin" id="email" placeholder="johnwick@mail.com" required>
-            </div>
-            <div class="logintextfield">
-                <label class="label-login" for="password">Password</label>
-                <input type="password" class="inputlogin" id="password" required><span></span>
+                <input type="email" class="inputlogin" id="email-login" placeholder="Email" required>
+            <div id="passwordfield">
+                <input type="password" class="inputlogin" id="password-login" placeholder="Your password here" required>
+                <img id="eyeicon" src="images/eye-closed.svg" alt="Icon of an eye closed">
             </div>
             <p class="plogin"><u>Have you forgot your password?</u></p>
             <button class="buttonlogin" id="btnlogin">Log in</button>
             <p id="register">Don't have an account? <strong>Sign up</strong></p>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

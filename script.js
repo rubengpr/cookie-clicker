@@ -1,3 +1,21 @@
+// Login page
+
+// Show/Hide password text
+let eyeIcon = document.getElementById("eyeicon")
+let password = document.getElementById("password-login")
+
+eyeIcon.addEventListener('click', function() {
+    if (password.type == "password") {
+        password.type = "text"
+        eyeIcon.src = "images/eye-open.svg"
+    } else {
+        password.type = "password"
+        eyeIcon.src = "images/eye-closed.svg"
+    }
+})
+
+//Main page
+
 // Initial cookie cookieCount
 let cookieCount = 0;
 
