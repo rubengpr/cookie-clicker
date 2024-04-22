@@ -14,6 +14,12 @@ eyeIcon.addEventListener('click', function() {
     }
 })
 
+// Register page
+const form = document.getElementById('registerform');
+const email = document.getElementById('email-register');
+const fullName = document.getElementById('fullname-register');
+
+
 //Main page
 
 // Initial cookie cookieCount
